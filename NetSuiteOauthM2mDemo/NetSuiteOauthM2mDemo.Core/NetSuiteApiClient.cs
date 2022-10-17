@@ -109,7 +109,6 @@ XXXXX
             using var httpRequest = new HttpRequestMessage(HttpMethod.Get, url);
             httpRequest.Headers.Authorization = new AuthenticationHeaderValue("Bearer", _accessToken);
 
-            //https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/console-webapiclient
             var httpResponse = await _httpClient.SendAsync(httpRequest);
             var responseJson = await httpResponse.Content.ReadAsStringAsync();
 
